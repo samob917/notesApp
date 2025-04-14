@@ -8,3 +8,4 @@ Once they make the project, we take them to the projects page where they can add
 There is then a completed button next to each bullet and an overall completed button. There should be an edit button and a delete button as well as a way to change the importance.
 
 Each project should have a card on a main page.
+
