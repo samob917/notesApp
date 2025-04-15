@@ -9,3 +9,10 @@ There is then a completed button next to each bullet and an overall completed bu
 
 Each project should have a card on a main page.
 
+---- Tech Details ----
+
+Main page has header and footer. These stay constant so they are in the template. There is a main content div. This is where content is dynamically added.
+
+The main display should have "Add to do" "Create new project" 
+
+Considering having a list of projects on one side that you can scroll on then when you select one the main page changes and the new project and all its todos appear on the right main screen.
