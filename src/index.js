@@ -1,4 +1,4 @@
-const content = document.querySelector(".content");
+const content = document.querySelector(".options");
 
 const projectButton = document.createElement("button");
 projectButton.textContent = "Create New Project";
