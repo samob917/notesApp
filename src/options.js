@@ -1,9 +1,19 @@
-export function setOptions(optionsArr) {
+import { createProject } from "./createProject";
+
+
+export function newProjButton() {
     const optionsDiv = document.querySelector(".options");
 
-    for (const option of optionsArr) {
-        var newOption = document.createElement("button");
-        newOption.textContent = option;
-        optionsDiv.appendChild(newOption);
-    }
+    const projButton = document.createElement("button");
+    projButton.textContent = "New Project";
+    projButton.addEventListener("click", createProject);
+    optionsDiv.append(projButton);
+}
+
+export function addItemButton() {
+    const optionsDiv = document.querySelector(".options");
+
+    const addItem = document.createElement("button");
+    addItem.textContent = "Add Item";
+    optionsDiv.append(addItem);
 }

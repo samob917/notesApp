@@ -1,8 +1,9 @@
-import { setOptions } from "./options";
+import { addItemButton, newProjButton } from "./options";
 import { getProjects } from "./projects";
 import { mainWindow } from "./mainWindow";
 import "./style.css"
-setOptions(["New Project", "Add Item"]);
+addItemButton();
+newProjButton();
 getProjects(["Main"]);
 let todos = [{"text": "Hello World"}];
 mainWindow(todos)
