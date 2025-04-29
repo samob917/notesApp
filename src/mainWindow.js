@@ -1,4 +1,5 @@
 import makeToDo from "./makeToDo";
+
 export function mainWindow(objArr) {
     const projWindow = document.querySelector(".project");
 

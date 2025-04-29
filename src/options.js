@@ -1,5 +1,5 @@
 import { createProject } from "./createProject";
-
+import { addToDo } from "./addToDo";
 
 export function newProjButton() {
     const optionsDiv = document.querySelector(".options");
@@ -15,5 +15,6 @@ export function addItemButton() {
 
     const addItem = document.createElement("button");
     addItem.textContent = "Add Item";
+    addItem.addEventListener("click", addToDo);
     optionsDiv.append(addItem);
 }

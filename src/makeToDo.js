@@ -19,6 +19,5 @@ export default function makeToDo(obj) {
     toDoDiv.appendChild(desc);
     toDoDiv.appendChild(due);
     toDoDiv.appendChild(priority);
-
     return toDoDiv
 }
