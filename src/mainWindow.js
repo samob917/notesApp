@@ -1,9 +1,9 @@
+import makeToDo from "./makeToDo";
 export function mainWindow(objArr) {
     const projWindow = document.querySelector(".project");
 
     for (const obj of objArr) {
-        var newObj = document.createElement("div");
-        newObj.textContent = obj.text;
-        projWindow.appendChild(newObj);
+        var todo = makeToDo(obj);
+        projWindow.appendChild(todo);
     }
 }

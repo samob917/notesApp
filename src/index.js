@@ -5,5 +5,9 @@ import "./style.css"
 addItemButton();
 newProjButton();
 getProjects(["Main"]);
-let todos = [{"text": "Hello World"}];
+let todos = [{"title": "Hello World", 
+    "desc": "First Note! Let me know what you think",
+    "due": "09/17/2001",
+    "priority": "High",
+}];
 mainWindow(todos)
