@@ -50,3 +50,14 @@ footer {
 .project-list {
     grid-row: 2 / -2;
 }
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    gap: 1rem;
+    border: 1px black solid;
+    background: rgb(245, 245, 179);
+    text-overflow: scroll;
+}
