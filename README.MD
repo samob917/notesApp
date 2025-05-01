@@ -16,3 +16,6 @@ Main page has header and footer. These stay constant so they are in the template
 The main display should have "Add to do" "Create new project" 
 
 Considering having a list of projects on one side that you can scroll on then when you select one the main page changes and the new project and all its todos appear on the right main screen.
+
+---
+To swap between projects, I need a json with keys for each project. Then the json is written to.
