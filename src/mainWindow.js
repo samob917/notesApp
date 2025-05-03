@@ -1,13 +1,17 @@
 import makeToDo from "./makeToDo";
 import { getTodos } from "./todos";
 import { clearDiv } from "./utilities";
+import { getActiveWindow, setActiveWindow } from "./activeWindow";
+
+const projWindow = document.querySelector(".project");
+
 function clearWindow() {
-    const projWindow = document.querySelector(".project");
     clearDiv(projWindow);
 }
 
 function openWindow(key) {
     clearWindow();
+    setActiveWindow(key);
     let objArr = getTodos(key);
     for (const obj of objArr) {
         var todo = makeToDo(obj);
@@ -15,8 +19,8 @@ function openWindow(key) {
     }
 }
 
-function mainWindow(json, key) {
-    const projWindow = document.querySelector(".project");
+function mainWindow(json) {
+    let key = getActiveWindow();
     let objArr = json[key]
     for (const obj of objArr) {
         var todo = makeToDo(obj);
@@ -24,4 +28,4 @@ function mainWindow(json, key) {
     }
 }
 
-export {openWindow, mainWindow}
+export {projWindow, openWindow, mainWindow}

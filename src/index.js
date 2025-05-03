@@ -5,5 +5,5 @@ import { todos } from "./todos";
 import "./style.css"
 addItemButton();
 newProjButton();
-getProjects(["Main"]);
-mainWindow(todos, "main")
+getProjects();
+mainWindow(todos)

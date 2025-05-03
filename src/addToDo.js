@@ -1,5 +1,7 @@
 import makeToDo from "./makeToDo";
 import { clearDiv } from "./utilities";
+import { addNewToDo } from "./todos";
+import { getActiveWindow } from "./activeWindow";
 
 function closeDialog() {
     const dialog = document.querySelector("dialog");
@@ -11,11 +13,11 @@ function handleForm(e) {
     e.preventDefault();
     console.log("form submitted");
     const title = document.querySelector("#title").value;
-    console.log(title);
     const desc = document.querySelector("#desc").value;
     const due = document.querySelector("#due").value;
     const priority = document.querySelector("#priority").value;
     const newToDoData = {"title": title, "desc": desc, "due": due, "priority": priority};
+    addNewToDo(getActiveWindow(), newToDoData);
     console.log(newToDoData);
     const newToDoDiv = makeToDo(newToDoData);
     const projWindow = document.querySelector(".project");
