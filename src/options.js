@@ -1,6 +1,8 @@
 import { createProject } from "./createProject";
 import { addToDo } from "./addToDo";
 
+
+
 export function newProjButton() {
     const optionsDiv = document.querySelector(".options");
 
