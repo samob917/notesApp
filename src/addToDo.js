@@ -16,7 +16,7 @@ function handleForm(e) {
     const desc = document.querySelector("#desc").value;
     const due = document.querySelector("#due").value;
     const priority = document.querySelector("#priority").value;
-    const newToDoData = {"title": title, "desc": desc, "due": due, "priority": priority};
+    const newToDoData = {"title": title, "desc": desc, "due": due, "priority": priority, "id": crypto.randomUUID()};
     addNewToDo(getActiveWindow(), newToDoData);
     console.log(newToDoData);
     const newToDoDiv = makeToDo(newToDoData);

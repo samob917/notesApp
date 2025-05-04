@@ -1,7 +1,12 @@
+import { getActiveWindow } from "./activeWindow";
+import { openWindow } from "./mainWindow";
+import { deleteToDo } from "./todos";
+
+
+
 export default function makeToDo(obj) {
     const toDoDiv = document.createElement("div");
     toDoDiv.classList.add("todo")
-
     const title = document.createElement("h2");
     title.classList.add("title")
     title.textContent = obj.title;
@@ -15,9 +20,20 @@ export default function makeToDo(obj) {
     priority.classList.add("priority")
     priority.textContent = obj.priority;
 
+    const del = document.createElement("button");
+    del.textContent = "Delete";
+    del.addEventListener("click", (e) => {
+        const id = e.target.parentElement.id;
+        const key = getActiveWindow();
+        deleteToDo(key, id);
+        openWindow(key);
+    })
+
+    toDoDiv.id = obj.id;
     toDoDiv.appendChild(title);
     toDoDiv.appendChild(desc);
     toDoDiv.appendChild(due);
     toDoDiv.appendChild(priority);
+    toDoDiv.appendChild(del);
     return toDoDiv
 }
