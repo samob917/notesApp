@@ -29,4 +29,15 @@ function deleteToDo(key, id) {
     }
 }
 
-export { todos, addKey, getTodos, getKeys, addNewToDo, deleteToDo};
+function editToDoWithObj(key, id, obj) {
+    const index = todos[key].findIndex(el => el.id === id);
+    obj.id = id;
+    todos[key].splice(index, 1, obj);
+}
+
+function getToDo(key, id) {
+    const index = todos[key].findIndex(el => el.id === id);
+    return todos[key][index]
+}
+
+export { todos, addKey, getTodos, getKeys, addNewToDo, deleteToDo, editToDoWithObj, getToDo};

@@ -1,4 +1,5 @@
 import { getActiveWindow } from "./activeWindow";
+import { editToDo, editToDoById } from "./editToDo";
 import { openWindow } from "./mainWindow";
 import { deleteToDo } from "./todos";
 
@@ -29,11 +30,21 @@ export default function makeToDo(obj) {
         openWindow(key);
     })
 
+    const edit = document.createElement("button");
+    edit.textContent = "Edit";
+    edit.addEventListener("click", (e) => {
+        const id = e.target.parentElement.id;
+        const key = getActiveWindow();
+        editToDoById(key, id);
+    })
+    
+
     toDoDiv.id = obj.id;
     toDoDiv.appendChild(title);
     toDoDiv.appendChild(desc);
     toDoDiv.appendChild(due);
     toDoDiv.appendChild(priority);
     toDoDiv.appendChild(del);
+    toDoDiv.appendChild(edit)
     return toDoDiv
 }
