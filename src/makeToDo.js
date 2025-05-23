@@ -38,13 +38,28 @@ export default function makeToDo(obj) {
         editToDoById(key, id);
     })
     
+    const expand = document.createElement("button");
+    expand.textContent = "Expand"
+    expand.addEventListener("click", (e)=> {
+        console.log(e.target.style.height)
+        if (e.target.parentElement.style.height === "150px"){
+            e.target.parentElement.style.height = "300px";
+        } else {
+            e.target.parentElement.style.height = "150px";
+        }
+            
+    })
+    
 
     toDoDiv.id = obj.id;
+    toDoDiv.appendChild(expand);
     toDoDiv.appendChild(title);
     toDoDiv.appendChild(desc);
     toDoDiv.appendChild(due);
     toDoDiv.appendChild(priority);
     toDoDiv.appendChild(del);
     toDoDiv.appendChild(edit)
+
+    
     return toDoDiv
 }
