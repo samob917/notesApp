@@ -10,7 +10,10 @@ export function createProject() {
         let key = e.target.textContent;
         openWindow(key);
     });
-    newProj.textContent = projName;
-    projList.appendChild(newProj);
-    addKey(projName)
+    if (projName != '') {
+        newProj.textContent = projName;
+        projList.appendChild(newProj);
+        addKey(projName)
+    }
+    
 }

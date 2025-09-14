@@ -12,6 +12,9 @@ export function getProjects() {
             openWindow(key);
         });
         newProject.textContent = project;
-        projectsDiv.appendChild(newProject);
+        if (project != ""){
+            console.log(project)
+            projectsDiv.appendChild(newProject);
+        }
     }
 };
